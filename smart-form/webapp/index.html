@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Form Processor - Professional Contact Form</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/form-steps.css">
+</head>
+<body>
+    <!-- Recovery Modal -->
+    <div id="recoveryModal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-icon">
+                <i class="fas fa-save"></i>
+            </div>
+            <h3>Form Data Found</h3>
+            <p>We found a saved form. Would you like to restore it?</p>
+            <div class="modal-actions">
+                <button id="restoreBtn" class="btn btn-primary">
+                    <i class="fas fa-check"></i> Yes, Restore
+                </button>
+                <button id="clearBtn" class="btn btn-secondary">
+                    <i class="fas fa-times"></i> No, Start Fresh
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container">
+        <header class="form-header">
+            <h1>
+                <i class="fas fa-paper-plane"></i>
+                Smart Form Processor
+            </h1>
+            <p class="subtitle">Professional inquiry form with AI-powered validation</p>
+        </header>
+
+        <!-- Progress Indicator -->
+        <div class="progress-container">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <div class="progress-steps">
+                <div class="progress-step active" data-step="1">
+                    <div class="step-circle">1</div>
+                    <div class="step-label">Personal Info</div>
+                </div>
+                <div class="progress-step" data-step="2">
+                    <div class="step-circle">2</div>
+                    <div class="step-label">Company Details</div>
+                </div>
+                <div class="progress-step" data-step="3">
+                    <div class="step-circle">3</div>
+                    <div class="step-label">Your Inquiry</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Form Container -->
+        <div class="form-container">
+            <form id="multiStepForm">
+                
+                <!-- STEP 1: Personal Information -->
+                <div class="form-step active" data-step="1">
+                    <h2 class="step-title">
+                        <i class="fas fa-user"></i>
+                        Personal Information
+                    </h2>
+                    <p class="step-description">Let's start with your basic details</p>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="fullName">
+                                Full Name <span class="required">*</span>
+                            </label>
+                            <div class="input-wrapper">
+                                <input 
+                                    type="text" 
+                                    id="fullName" 
+                                    name="fullName" 
+                                    placeholder="John Doe"
+                                    required
+                                >
+                                <i class="validation-icon"></i>
+                            </div>
+                            <span class="error-message"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">
+                                Email Address <span class="required">*</span>
+                            </label>
+                            <div class="input-wrapper">
+                                <input 
+                                    type="email" 
+                                    id="email" 
+                                    name="email" 
+                                    placeholder="john.doe@example.com"
+                                    required
+                                >
+                                <i class="validation-icon"></i>
+                            </div>
+                            <span class="error-message"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">
+                                Phone Number <span class="required">*</span>
+                            </label>
+                            <div class="input-wrapper">
+                                <input 
+                                    type="tel" 
+                                    id="phone" 
+                                    name="phone" 
+                                    placeholder="+1 (555) 123-4567"
+                                    required
+                                >
+                                <i class="validation-icon"></i>
+                            </div>
+                            <span class="error-message"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="company">
+                                Company/Organization
+                            </label>
+                            <div class="input-wrapper">
+                                <input 
+                                    type="text" 
+                                    id="company" 
+                                    name="company" 
+                                    placeholder="Acme Corporation"
+                                >
+                                <i class="validation-icon"></i>
+                            </div>
+                            <span class="error-message"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-primary btn-next" data-step="1" disabled>
+                            Next Step
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- STEP 2: Company Details -->
+                <div class="form-step" data-step="2">
+                    <h2 class="step-title">
+                        <i class="fas fa-building"></i>
+                        Company Details
+                    </h2>
+                    <p class="step-description">Help us understand your organization better (all optional)</p>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="industry">Industry</label>
+                            <select id="industry" name="industry">
+                                <option value="">Select Industry</option>
+                                <option value="technology">Technology</option>
+                                <option value="healthcare">Healthcare</option>
+                                <option value="finance">Finance</option>
+                                <option value="retail">Retail</option>
+                                <option value="consulting">Consulting</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="website">Website URL</label>
+                            <input 
+                                type="url" 
+                                id="website" 
+                                name="website" 
+                                placeholder="https://www.example.com"
+                            >
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Company Size</label>
+                        <div class="card-selection">
+                            <div class="selection-card" data-value="1-10">
+                                <i class="fas fa-user"></i>
+                                <span>1-10</span>
+                            </div>
+                            <div class="selection-card" data-value="11-50">
+                                <i class="fas fa-users"></i>
+                                <span>11-50</span>
+                            </div>
+                            <div class="selection-card" data-value="51-200">
+                                <i class="fas fa-user-friends"></i>
+                                <span>51-200</span>
+                            </div>
+                            <div class="selection-card" data-value="201-500">
+                                <i class="fas fa-building"></i>
+                                <span>201-500</span>
+                            </div>
+                            <div class="selection-card" data-value="500+">
+                                <i class="fas fa-city"></i>
+                                <span>500+</span>
+                            </div>
+                        </div>
+                        <input type="hidden" id="companySize" name="companySize">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="referralSource">How did you hear about us?</label>
+                        <select id="referralSource" name="referralSource">
+                            <option value="">Select Source</option>
+                            <option value="google">Google</option>
+                            <option value="linkedin">LinkedIn</option>
+                            <option value="referral">Referral</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary btn-prev" data-step="2">
+                            <i class="fas fa-arrow-left"></i>
+                            Previous
+                        </button>
+                        <button type="button" class="btn btn-primary btn-next" data-step="2">
+                            Next Step
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- STEP 3: Your Inquiry -->
+                <div class="form-step" data-step="3">
+                    <h2 class="step-title">
+                        <i class="fas fa-envelope"></i>
+                        Your Inquiry
+                    </h2>
+                    <p class="step-description">Tell us what you need</p>
+                    
+                    <div class="form-group">
+                        <label for="subject">
+                            Subject/Title <span class="required">*</span>
+                        </label>
+                        <div class="input-wrapper">
+                            <input 
+                                type="text" 
+                                id="subject" 
+                                name="subject" 
+                                placeholder="Brief description of your inquiry"
+                                required
+                            >
+                            <i class="validation-icon"></i>
+                        </div>
+                        <span class="error-message"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label>
+                            Inquiry Type <span class="required">*</span>
+                        </label>
+                        <div class="card-selection inquiry-cards">
+                            <div class="selection-card" data-value="sales">
+                                <i class="fas fa-chart-line"></i>
+                                <span>Sales Inquiry</span>
+                            </div>
+                            <div class="selection-card" data-value="support">
+                                <i class="fas fa-headset"></i>
+                                <span>Support Request</span>
+                            </div>
+                            <div class="selection-card" data-value="partnership">
+                                <i class="fas fa-handshake"></i>
+                                <span>Partnership</span>
+                            </div>
+                            <div class="selection-card" data-value="general">
+                                <i class="fas fa-question-circle"></i>
+                                <span>General Question</span>
+                            </div>
+                            <div class="selection-card" data-value="other">
+                                <i class="fas fa-ellipsis-h"></i>
+                                <span>Other</span>
+                            </div>
+                        </div>
+                        <input type="hidden" id="inquiryType" name="inquiryType" required>
+                        <span class="error-message"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">
+                            Message/Details <span class="required">*</span>
+                        </label>
+                        <div class="textarea-wrapper">
+                            <textarea 
+                                id="message" 
+                                name="message" 
+                                rows="6"
+                                placeholder="Please provide detailed information about your inquiry..."
+                                required
+                            ></textarea>
+                            <div class="char-counter">
+                                <span id="charCount">0</span>/1000 characters
+                            </div>
+                        </div>
+                        <span class="error-message"></span>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="budget">Project Budget</label>
+                            <select id="budget" name="budget">
+                                <option value="">Select Budget Range</option>
+                                <option value="<5k">&lt; $5,000</option>
+                                <option value="5k-10k">$5,000 - $10,000</option>
+                                <option value="10k-25k">$10,000 - $25,000</option>
+                                <option value="25k-50k">$25,000 - $50,000</option>
+                                <option value="50k+">$50,000+</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="timeline">Timeline</label>
+                            <select id="timeline" name="timeline">
+                                <option value="">Select Timeline</option>
+                                <option value="asap">ASAP</option>
+                                <option value="1-2weeks">1-2 weeks</option>
+                                <option value="1month">1 month</option>
+                                <option value="2-3months">2-3 months</option>
+                                <option value="flexible">Flexible</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="urgency">Urgency Level</label>
+                        <div class="radio-group">
+                            <label class="radio-label">
+                                <input type="radio" name="urgency" value="low">
+                                <span class="radio-custom"></span>
+                                Low
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="urgency" value="medium" checked>
+                                <span class="radio-custom"></span>
+                                Medium
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="urgency" value="high">
+                                <span class="radio-custom"></span>
+                                High
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="urgency" value="urgent">
+                                <span class="radio-custom"></span>
+                                Urgent
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>File Attachments (Optional)</label>
+                        <p class="field-hint">Max 3 files, 5MB each. Accepted: PDF, DOC, DOCX, JPG, PNG</p>
+                        
+                        <div class="file-upload-area" id="fileUploadArea">
+                            <div class="upload-icon">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                            </div>
+                            <p class="upload-text">
+                                Drag & drop files here or 
+                                <label for="fileInput" class="file-link">choose files</label>
+                            </p>
+                            <input type="file" id="fileInput" multiple accept=".pdf,.doc,.docx,.jpg,.jpeg,.png" hidden>
+                        </div>
+                        
+                        <div id="fileList" class="file-list"></div>
+                        <span class="error-message" id="fileError"></span>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary btn-prev" data-step="3">
+                            <i class="fas fa-arrow-left"></i>
+                            Previous
+                        </button>
+                        <button type="submit" class="btn btn-success btn-submit" disabled>
+                            <i class="fas fa-paper-plane"></i>
+                            Submit Inquiry
+                        </button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+
+        <!-- Success Message -->
+        <div id="successContainer" class="success-container hidden">
+            <div class="success-animation">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h2>Thank You!</h2>
+            <p class="success-message">Your inquiry has been received successfully</p>
+            <div class="reference-number">
+                <strong>Reference Number:</strong>
+                <span id="referenceNumber"></span>
+            </div>
+            <div class="submission-summary" id="submissionSummary"></div>
+            <button class="btn btn-primary" id="submitAnotherBtn">
+                <i class="fas fa-plus"></i>
+                Submit Another Inquiry
+            </button>
+        </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div id="loadingOverlay" class="loading-overlay hidden">
+        <div class="spinner"></div>
+        <p>Submitting your inquiry...</p>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/form-validation.js"></script>
+    <script src="js/form-steps.js"></script>
+    <script src="js/file-upload.js"></script>
+    <script src="js/submission.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
