@@ -1,0 +1,768 @@
+/* ===================================
+   La Belle Cuisine - Responsive Styles
+   Mobile-First Approach
+   ================================= */
+
+/* Tablet (768px - 1023px) */
+@media (max-width: 1023px) {
+    /* Typography Adjustments */
+    :root {
+        --text-5xl: 2.5rem;
+        --text-4xl: 2rem;
+        --text-3xl: 1.75rem;
+    }
+    
+    /* Container */
+    .container {
+        padding: 0 var(--spacing-lg);
+    }
+    
+    /* Section Spacing */
+    section {
+        padding: 60px 0;
+    }
+    
+    /* Header */
+    .header-phone span {
+        display: none;
+    }
+    
+    .nav-menu {
+        gap: var(--spacing-lg);
+    }
+    
+    /* Hero */
+    .hero {
+        min-height: 600px;
+    }
+    
+    .achievement-badges {
+        gap: var(--spacing-sm);
+    }
+    
+    .badge {
+        font-size: var(--text-xs);
+        padding: 6px 12px;
+    }
+    
+    /* Welcome Section */
+    .welcome-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-3xl);
+    }
+    
+    .features-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--spacing-md);
+    }
+    
+    /* Offers */
+    .offers-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+    
+    /* Menu */
+    .menu-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-lg);
+    }
+    
+    .menu-categories {
+        overflow-x: auto;
+        justify-content: flex-start;
+        padding: 0 var(--spacing-lg);
+    }
+    
+    .category-btn {
+        min-width: 100px;
+        padding: 12px 16px;
+    }
+    
+    .category-btn i {
+        font-size: var(--text-xl);
+    }
+    
+    .menu-filters {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    /* About Section */
+    .about-block {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-2xl);
+    }
+    
+    .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-lg);
+    }
+    
+    /* Gallery */
+    .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--spacing-md);
+    }
+    
+    /* Testimonials */
+    .rating-summary {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-xl);
+    }
+    
+    .overall-rating {
+        border-right: none;
+        border-bottom: 2px solid var(--border-color);
+        padding-bottom: var(--spacing-xl);
+    }
+    
+    /* Reservations */
+    .reservation-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-2xl);
+    }
+    
+    .form-row {
+        gap: var(--spacing-md);
+    }
+    
+    /* Contact */
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-2xl);
+    }
+    
+    .map-container {
+        height: 400px;
+    }
+    
+    /* Footer */
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-2xl);
+    }
+}
+
+/* Mobile (320px - 767px) */
+@media (max-width: 767px) {
+    /* Typography */
+    :root {
+        --text-6xl: 2.5rem;
+        --text-5xl: 2rem;
+        --text-4xl: 1.75rem;
+        --text-3xl: 1.5rem;
+        --text-2xl: 1.25rem;
+        --spacing-4xl: 3rem;
+        --spacing-3xl: 2.5rem;
+        --spacing-2xl: 2rem;
+    }
+    
+    /* Container */
+    .container {
+        padding: 0 var(--spacing-md);
+    }
+    
+    /* Section Spacing */
+    section {
+        padding: 40px 0;
+    }
+    
+    .section-header {
+        margin-bottom: var(--spacing-2xl);
+    }
+    
+    /* Buttons */
+    .btn {
+        padding: 10px 20px;
+        font-size: var(--text-sm);
+    }
+    
+    .btn-lg {
+        padding: 12px 24px;
+        font-size: var(--text-base);
+    }
+    
+    /* Header */
+    .navbar {
+        padding: 15px 0;
+    }
+    
+    .logo {
+        font-size: var(--text-xl);
+    }
+    
+    .logo-icon {
+        font-size: var(--text-2xl);
+    }
+    
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 280px;
+        height: 100%;
+        background-color: var(--background-color);
+        flex-direction: column;
+        padding: 80px 30px 30px;
+        box-shadow: var(--shadow-xl);
+        transition: right var(--transition-base);
+        z-index: var(--z-modal);
+        overflow-y: auto;
+    }
+    
+    .nav-menu.active {
+        right: 0;
+    }
+    
+    .nav-link {
+        padding: 15px 0;
+        font-size: var(--text-lg);
+        width: 100%;
+        border-bottom: 1px solid var(--border-color);
+    }
+    
+    .nav-link,
+    .header.scrolled .nav-link {
+        color: var(--text-color);
+    }
+    
+    .header-right {
+        gap: var(--spacing-sm);
+    }
+    
+    .header-phone,
+    .social-icons {
+        display: none;
+    }
+    
+    .header-right .btn {
+        display: none;
+    }
+    
+    .mobile-menu-toggle {
+        display: flex;
+    }
+    
+    .cart-btn {
+        font-size: var(--text-lg);
+    }
+    
+    /* Hero */
+    .hero {
+        height: 100svh;
+        min-height: 500px;
+    }
+    
+    .achievement-badges {
+        flex-direction: column;
+        align-items: center;
+        gap: var(--spacing-sm);
+    }
+    
+    .badge {
+        font-size: 0.7rem;
+        padding: 5px 10px;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+        margin-bottom: var(--spacing-xl);
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        gap: var(--spacing-md);
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto var(--spacing-xl);
+    }
+    
+    .hero-buttons .btn {
+        width: 100%;
+    }
+    
+    /* Welcome Section */
+    .welcome-text p {
+        font-size: var(--text-base);
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+    
+    .feature-card {
+        padding: var(--spacing-lg);
+    }
+    
+    .image-badge {
+        bottom: 10px;
+        right: 10px;
+        padding: var(--spacing-md);
+    }
+    
+    .badge-number {
+        font-size: var(--text-3xl);
+    }
+    
+    /* Offers */
+    .offer-card {
+        padding: var(--spacing-xl);
+    }
+    
+    /* Menu */
+    .menu-controls {
+        padding: 0;
+    }
+    
+    .menu-categories {
+        padding: 0 var(--spacing-md) var(--spacing-sm);
+        justify-content: flex-start;
+    }
+    
+    .category-btn {
+        min-width: 90px;
+        padding: 10px 12px;
+        font-size: var(--text-sm);
+    }
+    
+    .category-btn i {
+        font-size: var(--text-lg);
+    }
+    
+    .menu-search input {
+        font-size: var(--text-sm);
+        padding: 12px 12px 12px 44px;
+    }
+    
+    .menu-filters {
+        padding: var(--spacing-md);
+    }
+    
+    .filter-group {
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+    }
+    
+    .filter-buttons {
+        justify-content: space-between;
+    }
+    
+    .filter-btn {
+        flex: 1;
+        text-align: center;
+        padding: 8px 12px;
+        font-size: 0.75rem;
+    }
+    
+    .sort-select {
+        width: 100%;
+        font-size: var(--text-sm);
+    }
+    
+    .menu-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-xl);
+    }
+    
+    .menu-item-name {
+        font-size: var(--text-lg);
+    }
+    
+    .menu-item-description {
+        font-size: var(--text-sm);
+    }
+    
+    .menu-item-price {
+        font-size: var(--text-2xl);
+    }
+    
+    .add-to-cart-btn {
+        padding: 8px 16px;
+        font-size: var(--text-sm);
+    }
+    
+    /* Chef's Specials Carousel */
+    .special-slide {
+        height: 400px;
+    }
+    
+    .special-slide-content h3 {
+        font-size: var(--text-2xl);
+    }
+    
+    .special-slide-content p {
+        font-size: var(--text-base);
+    }
+    
+    .special-slide-price {
+        font-size: var(--text-3xl);
+    }
+    
+    .slider-btn {
+        width: 40px;
+        height: 40px;
+        font-size: var(--text-lg);
+    }
+    
+    .slider-prev {
+        left: 10px;
+    }
+    
+    .slider-next {
+        right: 10px;
+    }
+    
+    /* About */
+    .about-text p {
+        font-size: var(--text-base);
+    }
+    
+    .chef-quote {
+        padding: var(--spacing-lg);
+    }
+    
+    .chef-quote p {
+        font-size: var(--text-lg);
+    }
+    
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .value-card {
+        padding: var(--spacing-xl);
+    }
+    
+    .awards-grid {
+        gap: var(--spacing-lg);
+    }
+    
+    /* Gallery */
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-sm);
+    }
+    
+    .gallery-filters {
+        gap: var(--spacing-xs);
+    }
+    
+    .gallery-filter-btn {
+        padding: 8px 16px;
+        font-size: var(--text-sm);
+    }
+    
+    /* Lightbox */
+    .lightbox-content {
+        max-width: 95vw;
+        max-height: 85vh;
+    }
+    
+    .lightbox-close,
+    .lightbox-prev,
+    .lightbox-next {
+        width: 40px;
+        height: 40px;
+        font-size: var(--text-lg);
+    }
+    
+    .lightbox-close {
+        top: 10px;
+        right: 10px;
+    }
+    
+    .lightbox-prev {
+        left: 10px;
+    }
+    
+    .lightbox-next {
+        right: 10px;
+    }
+    
+    /* Testimonials */
+    .rating-summary {
+        padding: var(--spacing-xl);
+    }
+    
+    .rating-number {
+        font-size: 3rem;
+    }
+    
+    .rating-item {
+        grid-template-columns: 80px 1fr 40px;
+        gap: var(--spacing-sm);
+        font-size: var(--text-sm);
+    }
+    
+    .testimonial-card {
+        padding: var(--spacing-xl);
+    }
+    
+    .testimonial-text {
+        font-size: var(--text-base);
+    }
+    
+    .carousel-btn {
+        width: 40px;
+        height: 40px;
+        font-size: var(--text-lg);
+    }
+    
+    /* Reservations */
+    .reservation-form {
+        padding: var(--spacing-xl);
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+        margin-bottom: 0;
+    }
+    
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        font-size: var(--text-sm);
+    }
+    
+    .info-card {
+        padding: var(--spacing-lg);
+    }
+    
+    .info-card h3 {
+        font-size: var(--text-lg);
+    }
+    
+    /* Contact */
+    .map-container {
+        height: 300px;
+    }
+    
+    .contact-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .contact-icon {
+        width: 60px;
+        height: 60px;
+        margin: 0 auto;
+    }
+    
+    /* Footer */
+    .footer {
+        padding: var(--spacing-3xl) 0 var(--spacing-lg);
+    }
+    
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-2xl);
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: var(--spacing-md);
+    }
+    
+    .footer-bottom-links {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+    
+    /* Cart Sidebar */
+    .cart-sidebar {
+        width: 100%;
+        right: -100%;
+    }
+    
+    .cart-item-image {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .cart-item-name {
+        font-size: var(--text-sm);
+    }
+    
+    /* Back to Top */
+    .back-to-top {
+        width: 45px;
+        height: 45px;
+        bottom: 20px;
+        right: 20px;
+        font-size: var(--text-lg);
+    }
+    
+    /* Special Banner */
+    .banner-content {
+        padding: 0 var(--spacing-md);
+    }
+    
+    .banner-text {
+        font-size: var(--text-sm);
+    }
+}
+
+/* Small Mobile (320px - 479px) */
+@media (max-width: 479px) {
+    :root {
+        --spacing-4xl: 2.5rem;
+        --spacing-3xl: 2rem;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 0.9rem;
+    }
+    
+    .section-title {
+        font-size: var(--text-3xl);
+    }
+    
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .menu-item-content {
+        padding: var(--spacing-lg);
+    }
+    
+    .special-slide {
+        height: 350px;
+    }
+    
+    .footer-social {
+        justify-content: center;
+    }
+}
+
+/* Large Desktop (1440px+) */
+@media (min-width: 1440px) {
+    .container {
+        max-width: 1400px;
+    }
+    
+    .hero {
+        min-height: 800px;
+    }
+    
+    .menu-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .gallery-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+/* Print Styles */
+@media print {
+    .header,
+    .special-banner,
+    .back-to-top,
+    .cart-sidebar,
+    .mobile-menu-overlay,
+    .hero-buttons,
+    .scroll-indicator,
+    .add-to-cart-btn,
+    .cart-btn,
+    .slider-btn,
+    .carousel-btn,
+    .lightbox,
+    .footer {
+        display: none !important;
+    }
+    
+    .hero {
+        height: auto;
+        min-height: 0;
+        page-break-after: always;
+    }
+    
+    section {
+        page-break-inside: avoid;
+    }
+    
+    body {
+        font-size: 12pt;
+        line-height: 1.5;
+    }
+    
+    a {
+        text-decoration: underline;
+        color: #000;
+    }
+    
+    .menu-item,
+    .gallery-item {
+        box-shadow: none;
+        border: 1px solid #ccc;
+    }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Dark Mode Support (Optional) */
+@media (prefers-color-scheme: dark) {
+    /* Add dark mode styles here if implementing dark mode toggle */
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+    .btn-primary {
+        border: 3px solid var(--primary-color);
+    }
+    
+    .nav-link::after {
+        height: 3px;
+    }
+}
+
+/* Landscape Mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+    .hero {
+        height: auto;
+        min-height: 100vh;
+        padding: 100px 0 50px;
+    }
+    
+    .achievement-badges {
+        margin-bottom: var(--spacing-lg);
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+        margin-bottom: var(--spacing-sm);
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+        margin-bottom: var(--spacing-lg);
+    }
+    
+    .scroll-indicator {
+        display: none;
+    }
+}

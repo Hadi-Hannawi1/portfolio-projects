@@ -1,0 +1,1259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="La Belle Cuisine - Authentic French cuisine in the heart of Paris. Experience fine dining with our chef's special menu, featuring traditional French dishes and modern culinary innovations.">
+    <meta name="keywords" content="French restaurant, Paris dining, fine dining, French cuisine, bistro, La Belle Cuisine">
+    <meta name="author" content="La Belle Cuisine">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="La Belle Cuisine - Authentic French Restaurant in Paris">
+    <meta property="og:description" content="Experience the finest French cuisine in an elegant Parisian setting. Reserve your table today.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&h=630&fit=crop">
+    <meta property="og:url" content="https://labellecuisine.com">
+    <meta property="og:type" content="restaurant">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="La Belle Cuisine - Authentic French Restaurant">
+    <meta name="twitter:description" content="Experience the finest French cuisine in Paris">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&h=630&fit=crop">
+    
+    <title>La Belle Cuisine - Authentic French Restaurant in Paris</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🍽️</text></svg>">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Lato:wght@300;400;700&family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/menu.css">
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "name": "La Belle Cuisine",
+      "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4",
+      "description": "Authentic French cuisine in the heart of Paris",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "123 Rue de la Gastronomie",
+        "addressLocality": "Paris",
+        "postalCode": "75001",
+        "addressCountry": "FR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 48.8566,
+        "longitude": 2.3522
+      },
+      "telephone": "+33668839197",
+      "priceRange": "€€€",
+      "servesCuisine": "French",
+      "acceptsReservations": "True",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+          "opens": "12:00",
+          "closes": "15:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+          "opens": "19:00",
+          "closes": "23:00"
+        }
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "524"
+      }
+    }
+    </script>
+</head>
+<body>
+    
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-logo">🍽️</div>
+            <h2>La Belle Cuisine</h2>
+            <div class="loading-spinner"></div>
+        </div>
+    </div>
+    
+    <!-- Special Offer Banner -->
+    <div id="special-banner" class="special-banner">
+        <div class="banner-content">
+            <span class="banner-text">
+                <i class="fas fa-star"></i>
+                Today's Special: Duck Confit - 20% Off! 
+                <i class="fas fa-star"></i>
+            </span>
+            <button class="banner-close" aria-label="Close banner">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    </div>
+    
+    <!-- Header / Navigation -->
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="navbar">
+                <!-- Logo -->
+                <a href="#home" class="logo">
+                    <span class="logo-icon">🍽️</span>
+                    <span class="logo-text">La Belle Cuisine</span>
+                </a>
+                
+                <!-- Desktop Navigation -->
+                <ul class="nav-menu" id="nav-menu">
+                    <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+                    <li class="nav-item"><a href="#menu" class="nav-link">Menu</a></li>
+                    <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="#gallery" class="nav-link">Gallery</a></li>
+                    <li class="nav-item"><a href="#reservations" class="nav-link">Reservations</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                
+                <!-- Header Right -->
+                <div class="header-right">
+                    <a href="tel:+33668839197" class="header-phone">
+                        <i class="fas fa-phone"></i>
+                        <span>+33 6 68 83 91 97</span>
+                    </a>
+                    
+                    <!-- Social Icons -->
+                    <div class="social-icons">
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="TripAdvisor"><i class="fab fa-tripadvisor"></i></a>
+                    </div>
+                    
+                    <!-- Cart Icon (optional) -->
+                    <button class="cart-btn" id="cart-btn" aria-label="Shopping cart">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="cart-count" id="cart-count">0</span>
+                    </button>
+                    
+                    <!-- Reserve Button -->
+                    <a href="#reservations" class="btn btn-primary">Reserve a Table</a>
+                    
+                    <!-- Mobile Menu Toggle -->
+                    <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobile-menu-overlay"></div>
+    
+    <!-- Shopping Cart Sidebar -->
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3>Your Order</h3>
+            <button class="cart-close" id="cart-close" aria-label="Close cart">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <!-- Cart items will be added dynamically -->
+            <div class="empty-cart">
+                <i class="fas fa-shopping-bag"></i>
+                <p>Your cart is empty</p>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Subtotal:</span>
+                <span class="total-price" id="total-price">€0.00</span>
+            </div>
+            <button class="btn btn-primary btn-block" id="checkout-btn">
+                Proceed to Checkout
+            </button>
+        </div>
+    </div>
+    
+    <!-- Main Content -->
+    <main>
+        
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-bg"></div>
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <div class="container">
+                    <!-- Achievement Badges -->
+                    <div class="achievement-badges">
+                        <div class="badge">⭐ Michelin Recommended</div>
+                        <div class="badge">🏆 Best Restaurant 2024</div>
+                        <div class="badge">👨‍🍳 Chef's Special Menu</div>
+                    </div>
+                    
+                    <h1 class="hero-title">La Belle Cuisine</h1>
+                    <p class="hero-subtitle">Authentic French Cuisine in the Heart of Paris</p>
+                    
+                    <div class="hero-buttons">
+                        <a href="#menu" class="btn btn-primary btn-lg">View Menu</a>
+                        <a href="#reservations" class="btn btn-secondary btn-lg">Book a Table</a>
+                    </div>
+                    
+                    <div class="hero-hours">
+                        <i class="fas fa-clock"></i>
+                        <span>Open Today: 12:00 - 23:00</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Scroll Indicator -->
+            <div class="scroll-indicator">
+                <div class="scroll-arrow">
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Welcome / Introduction Section -->
+        <section id="welcome" class="welcome-section">
+            <div class="container">
+                <div class="welcome-grid">
+                    <!-- Left: Text Content -->
+                    <div class="welcome-content">
+                        <h2 class="section-title">Welcome to La Belle Cuisine</h2>
+                        <p class="section-subtitle">Where Tradition Meets Innovation</p>
+                        
+                        <div class="welcome-text">
+                            <p>For over two decades, La Belle Cuisine has been a cornerstone of Parisian gastronomy, offering an unforgettable dining experience that celebrates the rich traditions of French cuisine while embracing modern culinary innovation.</p>
+                            
+                            <p>Our commitment to excellence begins with sourcing the finest ingredients from local farmers and suppliers who share our passion for quality. Every dish that leaves our kitchen tells a story of dedication, craftsmanship, and the timeless art of French cooking.</p>
+                            
+                            <p>Under the guidance of our award-winning chef, we create dishes that honor classic French techniques while surprising and delighting even the most discerning palates. Each meal is an experience, carefully crafted to transport you through the flavors and traditions of France.</p>
+                            
+                            <p>Whether you're celebrating a special occasion or simply seeking an exceptional meal, La Belle Cuisine promises an atmosphere of elegance, warmth, and culinary excellence that will leave a lasting impression.</p>
+                        </div>
+                        
+                        <!-- Features -->
+                        <div class="features-grid">
+                            <div class="feature-card">
+                                <div class="feature-icon">🍷</div>
+                                <h3>Fine Wines</h3>
+                                <p>Curated selection of French wines</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">👨‍🍳</div>
+                                <h3>Expert Chefs</h3>
+                                <p>20+ years of culinary excellence</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">🌟</div>
+                                <h3>Fresh Ingredients</h3>
+                                <p>Locally sourced, daily delivered</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Right: Image -->
+                    <div class="welcome-image">
+                        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&h=1000&fit=crop" alt="Restaurant Interior" loading="lazy">
+                        <div class="image-badge">
+                            <span class="badge-number">20+</span>
+                            <span class="badge-text">Years of Excellence</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Special Offers Section -->
+        <section class="special-offers">
+            <div class="container">
+                <div class="offers-grid">
+                    <div class="offer-card">
+                        <div class="offer-icon">🍽️</div>
+                        <h3>Lunch Menu</h3>
+                        <p>3-course menu</p>
+                        <div class="offer-price">€29</div>
+                        <span class="offer-time">12:00 - 15:00</span>
+                    </div>
+                    <div class="offer-card highlight">
+                        <div class="offer-badge">Popular</div>
+                        <div class="offer-icon">🍹</div>
+                        <h3>Happy Hour</h3>
+                        <p>50% off cocktails</p>
+                        <div class="offer-price">From €6</div>
+                        <span class="offer-time">17:00 - 19:00</span>
+                    </div>
+                    <div class="offer-card">
+                        <div class="offer-icon">🎂</div>
+                        <h3>Special Occasions</h3>
+                        <p>Complimentary dessert</p>
+                        <div class="offer-price">Free</div>
+                        <span class="offer-time">With reservation</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Menu Section -->
+        <section id="menu" class="menu-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Our Menu</h2>
+                    <p class="section-subtitle">Discover our culinary masterpieces</p>
+                </div>
+                
+                <!-- Menu Controls -->
+                <div class="menu-controls">
+                    <!-- Category Filters -->
+                    <div class="menu-categories">
+                        <button class="category-btn active" data-category="all">
+                            <i class="fas fa-th"></i>
+                            <span>All</span>
+                        </button>
+                        <button class="category-btn" data-category="appetizers">
+                            <i class="fas fa-leaf"></i>
+                            <span>Appetizers</span>
+                        </button>
+                        <button class="category-btn" data-category="mains">
+                            <i class="fas fa-drumstick-bite"></i>
+                            <span>Main Course</span>
+                        </button>
+                        <button class="category-btn" data-category="desserts">
+                            <i class="fas fa-ice-cream"></i>
+                            <span>Desserts</span>
+                        </button>
+                        <button class="category-btn" data-category="beverages">
+                            <i class="fas fa-wine-glass"></i>
+                            <span>Beverages</span>
+                        </button>
+                        <button class="category-btn chef-special" data-category="specials">
+                            <i class="fas fa-star"></i>
+                            <span>Chef's Specials</span>
+                        </button>
+                    </div>
+                    
+                    <!-- Search Bar -->
+                    <div class="menu-search">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="menu-search" placeholder="Search menu items..." aria-label="Search menu">
+                    </div>
+                </div>
+                
+                <!-- Additional Filters -->
+                <div class="menu-filters">
+                    <div class="filter-group">
+                        <label>Dietary:</label>
+                        <div class="filter-buttons">
+                            <button class="filter-btn" data-filter="vegetarian">
+                                <i class="fas fa-seedling"></i> Vegetarian
+                            </button>
+                            <button class="filter-btn" data-filter="vegan">
+                                <i class="fas fa-leaf"></i> Vegan
+                            </button>
+                            <button class="filter-btn" data-filter="gluten-free">
+                                <i class="fas fa-wheat"></i> Gluten-Free
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label>Sort:</label>
+                        <select id="menu-sort" class="sort-select">
+                            <option value="recommended">Recommended</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                            <option value="name">Name: A-Z</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <!-- Menu Count -->
+                <div class="menu-count">
+                    <span>Showing <strong id="items-count">33</strong> items</span>
+                </div>
+                
+                <!-- Menu Grid -->
+                <div class="menu-grid" id="menu-grid">
+                    <!-- Menu items will be loaded dynamically via JavaScript -->
+                    <div class="menu-loading">
+                        <i class="fas fa-spinner fa-spin"></i>
+                        <p>Loading menu...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Chef's Specials Carousel -->
+        <section class="chef-specials-carousel">
+            <div class="container-fluid">
+                <div class="section-header">
+                    <h2 class="section-title">Chef's Special Tonight</h2>
+                    <p class="section-subtitle">Exclusive dishes prepared by our master chef</p>
+                </div>
+                
+                <div class="specials-slider" id="specials-slider">
+                    <div class="slider-track">
+                        <!-- Slides will be added dynamically -->
+                    </div>
+                    
+                    <!-- Navigation -->
+                    <button class="slider-btn slider-prev" aria-label="Previous special">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="slider-btn slider-next" aria-label="Next special">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                    
+                    <!-- Dots -->
+                    <div class="slider-dots"></div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- About Us Section -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <!-- Our Story -->
+                <div class="about-block">
+                    <div class="about-content">
+                        <h2 class="section-title">Our Story</h2>
+                        <p class="section-subtitle">A Journey of Culinary Excellence</p>
+                        <div class="about-text">
+                            <p>La Belle Cuisine was born from a simple passion: to bring authentic French cuisine to the heart of Paris in a way that honors tradition while embracing innovation. What started as a small bistro in 2002 has blossomed into one of Paris's most beloved dining destinations.</p>
+                            
+                            <p>Our founder, Marie Dubois, grew up in Lyon—the gastronomic capital of France—where she learned the art of French cooking from her grandmother. After training at Le Cordon Bleu and working in Michelin-starred kitchens across France, Marie opened La Belle Cuisine with a vision: to create a restaurant where every guest feels like family.</p>
+                            
+                            <p>Today, we continue that legacy, serving dishes that tell the story of French culinary heritage while incorporating seasonal ingredients and modern techniques. Every meal at La Belle Cuisine is a celebration of flavor, craftsmanship, and the joy of sharing good food with good company.</p>
+                        </div>
+                    </div>
+                    <div class="about-image">
+                        <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=800&h=600&fit=crop" alt="Restaurant History" loading="lazy">
+                    </div>
+                </div>
+                
+                <!-- Meet the Chef -->
+                <div class="about-block reverse">
+                    <div class="about-image">
+                        <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=800&h=600&fit=crop" alt="Chef Marie Dubois" loading="lazy">
+                    </div>
+                    <div class="about-content">
+                        <h2 class="section-title">Meet Chef Marie Dubois</h2>
+                        <p class="section-subtitle">Executive Chef & Founder</p>
+                        <div class="about-text">
+                            <p>With over 25 years of culinary experience, Chef Marie Dubois has become one of Paris's most respected culinary figures. Trained at the prestigious Le Cordon Bleu and mentored by Michelin-starred chefs, Marie brings both technical excellence and creative vision to every dish.</p>
+                            
+                            <p>Her philosophy is simple: "Cooking is not just about feeding people—it's about creating memories, evoking emotions, and celebrating life's precious moments." This approach has earned La Belle Cuisine numerous accolades, including recognition from the Michelin Guide and features in leading culinary publications.</p>
+                            
+                            <blockquote class="chef-quote">
+                                <i class="fas fa-quote-left"></i>
+                                <p>"Cooking is an art that feeds the soul. Every dish we create is made with love, passion, and respect for the ingredients and the people who will enjoy it."</p>
+                                <cite>— Chef Marie Dubois</cite>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Our Values -->
+                <div class="values-section">
+                    <h2 class="section-title">Our Values</h2>
+                    <p class="section-subtitle">What drives us every day</p>
+                    
+                    <div class="values-grid">
+                        <div class="value-card">
+                            <div class="value-icon">🌱</div>
+                            <h3>Quality</h3>
+                            <p>Farm-to-table approach with ingredients sourced from local farmers and suppliers who share our commitment to excellence.</p>
+                        </div>
+                        <div class="value-card">
+                            <div class="value-icon">♻️</div>
+                            <h3>Sustainability</h3>
+                            <p>Eco-friendly practices throughout our operations, from composting to minimizing food waste and using sustainable packaging.</p>
+                        </div>
+                        <div class="value-card">
+                            <div class="value-icon">🤝</div>
+                            <h3>Community</h3>
+                            <p>Supporting local producers, artisans, and our neighborhood through partnerships and community initiatives.</p>
+                        </div>
+                        <div class="value-card">
+                            <div class="value-icon">⭐</div>
+                            <h3>Excellence</h3>
+                            <p>Unwavering commitment to perfection in every aspect—from ingredient selection to service and ambiance.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Awards & Recognition -->
+                <div class="awards-section">
+                    <h3>Awards & Recognition</h3>
+                    <div class="awards-grid">
+                        <div class="award-badge">
+                            <i class="fas fa-star"></i>
+                            <span>Michelin Guide Recommended</span>
+                        </div>
+                        <div class="award-badge">
+                            <i class="fab fa-tripadvisor"></i>
+                            <span>TripAdvisor Excellence 2024</span>
+                        </div>
+                        <div class="award-badge">
+                            <i class="fas fa-trophy"></i>
+                            <span>Best Restaurant Paris 2023</span>
+                        </div>
+                        <div class="award-badge">
+                            <i class="fas fa-award"></i>
+                            <span>Wine Spectator Award</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Gallery Section -->
+        <section id="gallery" class="gallery-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Our Gallery</h2>
+                    <p class="section-subtitle">A glimpse into our culinary world</p>
+                </div>
+                
+                <!-- Gallery Filters -->
+                <div class="gallery-filters">
+                    <button class="gallery-filter-btn active" data-filter="all">All</button>
+                    <button class="gallery-filter-btn" data-filter="food">Food</button>
+                    <button class="gallery-filter-btn" data-filter="interior">Interior</button>
+                    <button class="gallery-filter-btn" data-filter="events">Events</button>
+                    <button class="gallery-filter-btn" data-filter="team">Team</button>
+                </div>
+                
+                <!-- Gallery Grid -->
+                <div class="gallery-grid" id="gallery-grid">
+                    <!-- Food Images -->
+                    <div class="gallery-item" data-category="food" data-index="0">
+                        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&h=600&fit=crop" alt="Gourmet dish" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-caption">
+                                <h4>Signature Dish</h4>
+                                <span class="gallery-category">Food</span>
+                            </div>
+                            <button class="gallery-zoom" aria-label="View image">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-category="interior" data-index="1">
+                        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&h=600&fit=crop" alt="Restaurant interior" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-caption">
+                                <h4>Elegant Dining Room</h4>
+                                <span class="gallery-category">Interior</span>
+                            </div>
+                            <button class="gallery-zoom" aria-label="View image">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-category="food" data-index="2">
+                        <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=600&h=600&fit=crop" alt="Breakfast spread" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-caption">
+                                <h4>Brunch Selection</h4>
+                                <span class="gallery-category">Food</span>
+                            </div>
+                            <button class="gallery-zoom" aria-label="View image">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-category="team" data-index="3">
+                        <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=600&h=600&fit=crop" alt="Kitchen team" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-caption">
+                                <h4>Our Culinary Team</h4>
+                                <span class="gallery-category">Team</span>
+                            </div>
+                            <button class="gallery-zoom" aria-label="View image">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-category="food" data-index="4">
+                        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&h=600&fit=crop" alt="Pizza" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-caption">
+                                <h4>Artisan Pizza</h4>
+                                <span class="gallery-category">Food</span>
+                            </div>
+                            <button class="gallery-zoom" aria-label="View image">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-category="interior" data-index="5">
+                        <img src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?w=600&h=600&fit=crop" alt="Bar area" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-caption">
+                                <h4>Wine Bar</h4>
+                                <span class="gallery-category">Interior</span>
+                            </div>
+                            <button class="gallery-zoom" aria-label="View image">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-category="events" data-index="6">
+                        <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=600&h=600&fit=crop" alt="Private event" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-caption">
+                                <h4>Private Dining</h4>
+                                <span class="gallery-category">Events</span>
+                            </div>
+                            <button class="gallery-zoom" aria-label="View image">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-category="food" data-index="7">
+                        <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=600&h=600&fit=crop" alt="Pasta dish" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-caption">
+                                <h4>Fresh Pasta</h4>
+                                <span class="gallery-category">Food</span>
+                            </div>
+                            <button class="gallery-zoom" aria-label="View image">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-category="food" data-index="8">
+                        <img src="https://images.unsplash.com/photo-1563379926898-05f4575a45d8?w=600&h=600&fit=crop" alt="Dessert" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-caption">
+                                <h4>Chocolate Fondant</h4>
+                                <span class="gallery-category">Food</span>
+                            </div>
+                            <button class="gallery-zoom" aria-label="View image">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-category="interior" data-index="9">
+                        <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?w=600&h=600&fit=crop" alt="Outdoor seating" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-caption">
+                                <h4>Terrace Dining</h4>
+                                <span class="gallery-category">Interior</span>
+                            </div>
+                            <button class="gallery-zoom" aria-label="View image">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-category="food" data-index="10">
+                        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&h=600&fit=crop" alt="Salad" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-caption">
+                                <h4>Fresh Salads</h4>
+                                <span class="gallery-category">Food</span>
+                            </div>
+                            <button class="gallery-zoom" aria-label="View image">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-category="events" data-index="11">
+                        <img src="https://images.unsplash.com/photo-1478146896981-b80fe463b330?w=600&h=600&fit=crop" alt="Wedding event" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-caption">
+                                <h4>Special Occasions</h4>
+                                <span class="gallery-category">Events</span>
+                            </div>
+                            <button class="gallery-zoom" aria-label="View image">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Gallery Lightbox -->
+        <div class="lightbox" id="lightbox">
+            <button class="lightbox-close" aria-label="Close lightbox">
+                <i class="fas fa-times"></i>
+            </button>
+            <button class="lightbox-prev" aria-label="Previous image">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="lightbox-next" aria-label="Next image">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+            <div class="lightbox-content">
+                <img src="" alt="" id="lightbox-img">
+                <div class="lightbox-caption">
+                    <h3 id="lightbox-title"></h3>
+                    <span id="lightbox-counter"></span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Testimonials Section -->
+        <section class="testimonials-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">What Our Guests Say</h2>
+                    <p class="section-subtitle">Read reviews from our valued customers</p>
+                </div>
+                
+                <!-- Rating Summary -->
+                <div class="rating-summary">
+                    <div class="overall-rating">
+                        <div class="rating-number">4.8</div>
+                        <div class="rating-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="rating-text">Based on 524 reviews</div>
+                    </div>
+                    <div class="rating-breakdown">
+                        <div class="rating-item">
+                            <span>Food</span>
+                            <div class="rating-bar">
+                                <div class="rating-fill" style="width: 98%"></div>
+                            </div>
+                            <span>4.9</span>
+                        </div>
+                        <div class="rating-item">
+                            <span>Service</span>
+                            <div class="rating-bar">
+                                <div class="rating-fill" style="width: 96%"></div>
+                            </div>
+                            <span>4.8</span>
+                        </div>
+                        <div class="rating-item">
+                            <span>Ambiance</span>
+                            <div class="rating-bar">
+                                <div class="rating-fill" style="width: 94%"></div>
+                            </div>
+                            <span>4.7</span>
+                        </div>
+                        <div class="rating-item">
+                            <span>Value</span>
+                            <div class="rating-bar">
+                                <div class="rating-fill" style="width: 92%"></div>
+                            </div>
+                            <span>4.6</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonials Carousel -->
+                <div class="testimonials-carousel" id="testimonials-carousel">
+                    <div class="testimonials-track">
+                        <div class="testimonial-card">
+                            <div class="testimonial-stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="testimonial-text">"Absolutely phenomenal! The Duck Confit was cooked to perfection, and the service was impeccable. This is authentic French cuisine at its finest. We'll definitely be returning for our anniversary."</p>
+                            <div class="testimonial-author">
+                                <img src="https://i.pravatar.cc/100?img=1" alt="Sarah Mitchell">
+                                <div class="author-info">
+                                    <h4>Sarah Mitchell</h4>
+                                    <span class="author-date">December 2024</span>
+                                    <div class="review-source">
+                                        <i class="fab fa-google"></i> Google
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="testimonial-card">
+                            <div class="testimonial-stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="testimonial-text">"An unforgettable dining experience! From the moment we walked in, we were treated like royalty. The Beef Bourguignon melted in our mouths, and the wine selection was outstanding. Highly recommended!"</p>
+                            <div class="testimonial-author">
+                                <img src="https://i.pravatar.cc/100?img=3" alt="James Anderson">
+                                <div class="author-info">
+                                    <h4>James Anderson</h4>
+                                    <span class="author-date">November 2024</span>
+                                    <div class="review-source">
+                                        <i class="fab fa-tripadvisor"></i> TripAdvisor
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="testimonial-card">
+                            <div class="testimonial-stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="testimonial-text">"Best restaurant in Paris! The atmosphere is elegant yet welcoming, and Chef Marie's creativity shines through every dish. The Lobster Thermidor was divine. Worth every euro!"</p>
+                            <div class="testimonial-author">
+                                <img src="https://i.pravatar.cc/100?img=5" alt="Emma Laurent">
+                                <div class="author-info">
+                                    <h4>Emma Laurent</h4>
+                                    <span class="author-date">November 2024</span>
+                                    <div class="review-source">
+                                        <i class="fab fa-yelp"></i> Yelp
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="testimonial-card">
+                            <div class="testimonial-stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <p class="testimonial-text">"Celebrated our 10th anniversary here and it was perfect. The staff accommodated our dietary restrictions beautifully, and the complimentary dessert was a lovely touch. Merci beaucoup!"</p>
+                            <div class="testimonial-author">
+                                <img src="https://i.pravatar.cc/100?img=9" alt="Michael Chen">
+                                <div class="author-info">
+                                    <h4>Michael Chen</h4>
+                                    <span class="author-date">October 2024</span>
+                                    <div class="review-source">
+                                        <i class="fab fa-google"></i> Google
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="testimonial-card">
+                            <div class="testimonial-stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="testimonial-text">"As a food critic, I'm hard to impress, but La Belle Cuisine exceeded all expectations. The attention to detail, from ingredients to presentation, is remarkable. This is French cuisine done right."</p>
+                            <div class="testimonial-author">
+                                <img src="https://i.pravatar.cc/100?img=8" alt="Sophie Martin">
+                                <div class="author-info">
+                                    <h4>Sophie Martin</h4>
+                                    <span class="author-date">October 2024</span>
+                                    <div class="review-source">
+                                        <i class="fab fa-tripadvisor"></i> TripAdvisor
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Navigation -->
+                    <button class="carousel-btn carousel-prev" aria-label="Previous testimonial">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="carousel-btn carousel-next" aria-label="Next testimonial">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                    
+                    <!-- Dots -->
+                    <div class="carousel-dots"></div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Reservations Section -->
+        <section id="reservations" class="reservations-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Reserve Your Table</h2>
+                    <p class="section-subtitle">Book your unforgettable dining experience</p>
+                </div>
+                
+                <div class="reservation-grid">
+                    <!-- Left: Reservation Form -->
+                    <div class="reservation-form-container">
+                        <form id="reservation-form" class="reservation-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name">Full Name *</label>
+                                    <input type="text" id="name" name="name" required placeholder="Your full name">
+                                    <span class="form-error"></span>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="email">Email Address *</label>
+                                    <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                                    <span class="form-error"></span>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="phone">Phone Number *</label>
+                                    <input type="tel" id="phone" name="phone" required placeholder="+33 6 12 34 56 78">
+                                    <span class="form-error"></span>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="guests">Number of Guests *</label>
+                                    <select id="guests" name="guests" required>
+                                        <option value="">Select guests</option>
+                                        <option value="1">1 person</option>
+                                        <option value="2">2 people</option>
+                                        <option value="3">3 people</option>
+                                        <option value="4">4 people</option>
+                                        <option value="5">5 people</option>
+                                        <option value="6">6 people</option>
+                                        <option value="7">7 people</option>
+                                        <option value="8">8 people</option>
+                                        <option value="9">9 people</option>
+                                        <option value="10">10 people</option>
+                                        <option value="10+">10+ people (call us)</option>
+                                    </select>
+                                    <span class="form-error"></span>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="date">Reservation Date *</label>
+                                    <input type="date" id="date" name="date" required>
+                                    <span class="form-error"></span>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="time">Reservation Time *</label>
+                                    <select id="time" name="time" required>
+                                        <option value="">Select time</option>
+                                        <optgroup label="Lunch Service">
+                                            <option value="12:00">12:00 PM</option>
+                                            <option value="12:30">12:30 PM</option>
+                                            <option value="13:00">1:00 PM</option>
+                                            <option value="13:30">1:30 PM</option>
+                                            <option value="14:00">2:00 PM</option>
+                                            <option value="14:30">2:30 PM</option>
+                                        </optgroup>
+                                        <optgroup label="Dinner Service">
+                                            <option value="19:00">7:00 PM</option>
+                                            <option value="19:30">7:30 PM</option>
+                                            <option value="20:00">8:00 PM</option>
+                                            <option value="20:30">8:30 PM</option>
+                                            <option value="21:00">9:00 PM</option>
+                                            <option value="21:30">9:30 PM</option>
+                                            <option value="22:00">10:00 PM</option>
+                                        </optgroup>
+                                    </select>
+                                    <span class="form-error"></span>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="occasion">Special Occasion (Optional)</label>
+                                <select id="occasion" name="occasion">
+                                    <option value="">Select occasion</option>
+                                    <option value="birthday">🎂 Birthday</option>
+                                    <option value="anniversary">💑 Anniversary</option>
+                                    <option value="business">💼 Business Dinner</option>
+                                    <option value="proposal">💍 Proposal</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="requests">Special Requests (Optional)</label>
+                                <textarea id="requests" name="requests" rows="4" maxlength="500" placeholder="Dietary restrictions, seating preferences, allergies, etc."></textarea>
+                                <span class="char-count">0 / 500</span>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary btn-lg btn-block">
+                                <i class="fas fa-calendar-check"></i>
+                                Confirm Reservation
+                            </button>
+                            
+                            <div class="form-status" id="form-status"></div>
+                        </form>
+                    </div>
+                    
+                    <!-- Right: Information -->
+                    <div class="reservation-info">
+                        <div class="info-card">
+                            <h3><i class="fas fa-clock"></i> Opening Hours</h3>
+                            <div class="hours-list">
+                                <div class="hours-item">
+                                    <span>Monday</span>
+                                    <span class="closed">Closed</span>
+                                </div>
+                                <div class="hours-item">
+                                    <span>Tuesday - Sunday</span>
+                                    <span>12:00 - 15:00</span>
+                                </div>
+                                <div class="hours-item">
+                                    <span></span>
+                                    <span>19:00 - 23:00</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="info-card">
+                            <h3><i class="fas fa-info-circle"></i> Good to Know</h3>
+                            <ul class="info-list">
+                                <li><i class="fas fa-check"></i> Average dining time: 1.5 - 2 hours</li>
+                                <li><i class="fas fa-check"></i> Dress code: Smart casual</li>
+                                <li><i class="fas fa-check"></i> Cancellation: 24 hours notice required</li>
+                                <li><i class="fas fa-check"></i> We accommodate dietary restrictions</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="info-card">
+                            <h3><i class="fas fa-lightbulb"></i> Reservation Tips</h3>
+                            <ul class="info-list">
+                                <li><i class="fas fa-star"></i> Book early for weekends</li>
+                                <li><i class="fas fa-star"></i> Special occasions? Let us know!</li>
+                                <li><i class="fas fa-star"></i> Private dining available for 10+ guests</li>
+                                <li><i class="fas fa-star"></i> Call us for same-day reservations</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="info-card contact-card">
+                            <h3><i class="fas fa-phone"></i> Questions?</h3>
+                            <p>Contact us for assistance</p>
+                            <a href="tel:+33668839197" class="contact-link">
+                                <i class="fas fa-phone"></i> +33 6 68 83 91 97
+                            </a>
+                            <a href="mailto:reservations@labellecuisine.com" class="contact-link">
+                                <i class="fas fa-envelope"></i> reservations@labellecuisine.com
+                            </a>
+                        </div>
+                        
+                        <div class="reservation-image">
+                            <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&h=400&fit=crop" alt="Elegant dining" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Location & Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Visit Us</h2>
+                    <p class="section-subtitle">Find us in the heart of Paris</p>
+                </div>
+                
+                <div class="contact-grid">
+                    <!-- Map -->
+                    <div class="map-container">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.9916256937604!2d2.3470599160815267!3d48.85837007928746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e671d877937b0f%3A0xb975fcfa192f84d4!2sNotre-Dame%20de%20Paris!5e0!3m2!1sen!2sfr!4v1638360000000!5m2!1sen!2sfr" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy"
+                            title="La Belle Cuisine Location">
+                        </iframe>
+                    </div>
+                    
+                    <!-- Contact Info -->
+                    <div class="contact-info">
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Address</h3>
+                                <p>123 Rue de la Gastronomie<br>75001 Paris, France</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Opening Hours</h3>
+                                <p><strong>Tuesday - Sunday</strong><br>
+                                Lunch: 12:00 - 15:00<br>
+                                Dinner: 19:00 - 23:00</p>
+                                <p><strong>Monday:</strong> Closed</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Phone</h3>
+                                <p><a href="tel:+33668839197">+33 6 68 83 91 97</a></p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Email</h3>
+                                <p><a href="mailto:info@labellecuisine.com">info@labellecuisine.com</a></p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-directions"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Getting Here</h3>
+                                <p><i class="fas fa-subway"></i> <strong>Metro:</strong> Châtelet (Lines 1, 4, 7, 11, 14)</p>
+                                <p><i class="fas fa-parking"></i> <strong>Parking:</strong> Nearby public parking available</p>
+                                <p><i class="fas fa-walking"></i> <strong>Walking distance:</strong> From Louvre Museum</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Column 1: About -->
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <span class="logo-icon">🍽️</span>
+                        <span class="logo-text">La Belle Cuisine</span>
+                    </div>
+                    <p class="footer-description">Authentic French cuisine in the heart of Paris, celebrating tradition and innovation since 2002.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="TripAdvisor"><i class="fab fa-tripadvisor"></i></a>
+                    </div>
+                    <div class="footer-awards">
+                        <span class="award-badge-small">⭐ Michelin</span>
+                        <span class="award-badge-small">🏆 Best 2024</span>
+                    </div>
+                </div>
+                
+                <!-- Column 2: Quick Links -->
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#reservations">Reservations</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#">Press & Media</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Column 3: Contact -->
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>123 Rue de la Gastronomie<br>75001 Paris, France</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+33668839197">+33 6 68 83 91 97</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:info@labellecuisine.com">info@labellecuisine.com</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <span>Tue-Sun: 12:00-15:00, 19:00-23:00</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Column 4: Newsletter -->
+                <div class="footer-column">
+                    <h3>Stay Updated</h3>
+                    <p>Get exclusive offers and updates</p>
+                    <form class="newsletter-form" id="newsletter-form">
+                        <input type="email" placeholder="Your email address" required aria-label="Email for newsletter">
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                    <p class="newsletter-privacy">We respect your privacy</p>
+                </div>
+            </div>
+            
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p>&copy; 2024 La Belle Cuisine. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Sitemap</a>
+                </div>
+                <p class="footer-credit">Website by <a href="https://hadihannawi.com" target="_blank">Hadi Hannawi</a></p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <!-- JavaScript Files -->
+    <script src="js/main.js"></script>
+    <script src="js/menu-filter.js"></script>
+    <script src="js/gallery.js"></script>
+    <script src="js/reservation.js"></script>
+    <script src="js/cart.js"></script>
+</body>
+</html>
